@@ -1,7 +1,6 @@
+import 'package:bank_of_luck/Models/Person.dart';
 import 'package:bank_of_luck/Models/Players.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../Models/Person.dart';
 
 class PlayBoard extends StatelessWidget {
   PlayBoard(this._person, this.data);

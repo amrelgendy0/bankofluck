@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Person with ChangeNotifier {
+class Person {
   final String name;
   int Score;
   final Color color;

@@ -10,10 +10,8 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (BuildContext context) {
-        return Players();
-      },
+    return ChangeNotifierProvider.value(
+      value: Players(),
       child: MaterialApp(
         home: Scaffold(
           body: HomeScreen(),
@@ -22,6 +20,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-

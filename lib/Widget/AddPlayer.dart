@@ -22,7 +22,7 @@ class AddPlayerWidget extends StatelessWidget {
           ),
           TextField(
             keyboardType: TextInputType.number,
-            decoration: InputDecoration(hintText: 'Score'),
+            decoration:const  InputDecoration(hintText: 'Score'),
             onChanged: (value) {
               try{
                 score = int.parse(value);
