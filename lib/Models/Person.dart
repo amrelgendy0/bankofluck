@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class Person with ChangeNotifier {
   final String name;
-  int Score ;
- final Color color  ;
+  int Score;
+  final Color color;
   List<String> _log;
-  Person(this.name,this.Score,this.color,this._log);
+  Person(this.name, this.Score, this.color, this._log);
 
   List<String> get log => _log;
 

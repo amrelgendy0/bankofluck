@@ -1,15 +1,15 @@
 import 'package:bank_of_luck/Models/Players.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'Models/Person.dart';
+import '../Models/Person.dart';
 
-class playboard extends StatelessWidget {
-  playboard(this._person);
+class PlayBoard extends StatelessWidget {
+  PlayBoard(this._person, this.data);
   Person _person;
   TextEditingController _changenumber = TextEditingController();
+  Players data;
   @override
   Widget build(BuildContext context) {
-    var data = Provider.of<Players>(context);
     return Expanded(
       child: ListView(
         children: <Widget>[
@@ -24,10 +24,11 @@ class playboard extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           Container(
-              child: TextField(textAlign: TextAlign.center,
-                keyboardType: TextInputType.number,
-                controller: _changenumber,
-              )),
+              child: TextField(
+            textAlign: TextAlign.center,
+            keyboardType: TextInputType.number,
+            controller: _changenumber,
+          )),
           RaisedButton(
             color: Colors.green.shade300,
             onPressed: () {
@@ -59,7 +60,7 @@ class playboard extends StatelessWidget {
               return MaterialButton(
                 color: e.color,
                 onPressed: () {
-                  data.tranfare(data.get(_person.name), data.get(e.name),
+                  data.transfare(data.get(_person.name), data.get(e.name),
                       int.parse(_changenumber.text));
                   _changenumber.clear();
                 },

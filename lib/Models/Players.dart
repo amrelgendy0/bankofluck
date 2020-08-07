@@ -28,7 +28,7 @@ class Players with ChangeNotifier {
     return _pplayers.firstWhere((element) => element.name == name);
   }
 
-  tranfare(Person from, Person to, int money) {
+ void transfare(Person from, Person to, int money) {
     if (from.Score >= money) {
       to.AddToScore(money);
       from.AddToScore(-money);

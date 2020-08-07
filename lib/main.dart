@@ -1,7 +1,7 @@
 import 'package:bank_of_luck/Models/Players.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'init.dart';
+import 'Screen/HomeScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       },
       child: MaterialApp(
         home: Scaffold(
-          body: init(),
+          body: HomeScreen(),
         ),
       ),
     );
